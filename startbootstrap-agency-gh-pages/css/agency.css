@@ -3,6 +3,9 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+ .radiusAdj {
+   border-radius: 48%;
+ }
 .lineHeightAdj {
   line-height: 2;
 }
@@ -239,9 +242,10 @@ header {
   -o-background-size: cover;
   text-align: center;
   color: white;
+  height: 667px;
 }
 header .intro-text {
-  padding-top: 100px;
+  padding-top: 210px;
   padding-bottom: 50px;
 }
 header .intro-text .intro-lead-in {
@@ -259,7 +263,7 @@ header .intro-text .intro-heading {
   line-height: 50px;
   margin-bottom: 25px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   header .intro-text {
     padding-top: 300px;
     padding-bottom: 200px;
@@ -365,7 +369,7 @@ section h3.section-subheading {
 #portfolio * {
   z-index: 2;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   #portfolio .portfolio-item {
     margin: 0 0 30px;
   }
@@ -497,7 +501,7 @@ section h3.section-subheading {
     padding: 0 30px 20px 20px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .timeline > li {
     min-height: 150px;
   }
@@ -531,7 +535,7 @@ section h3.section-subheading {
     margin-left: -85px;
   }
   .timeline > li .timeline-image h4 {
-    margin-top: 40px;
+    margin-top: 10px;
   }
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
