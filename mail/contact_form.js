@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 //possible incoming routes
-router.post('/contact_form.js', sendConfirmationEmail);
+router.post('/mail/contact_form.js', sendConfirmationEmail);
 
 function sendConfirmationEmail(req, res){
     console.log(req);
