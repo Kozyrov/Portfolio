@@ -6,7 +6,7 @@ const router = express.Router();
 router.post('/contact_form.js', sendConfirmationEmail);
 
 function sendConfirmationEmail(req, res){
-    console.log(req.body);
+    console.log(req);
 //     // create reusable transporter object using the default SMTP transport
 //     let transporter = nodemailer.createTransport({
 //         service: "email",
