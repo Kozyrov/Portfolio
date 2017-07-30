@@ -189,7 +189,7 @@
               } else if ($this.data("validationEmailMessage")) {
                 message = $this.data("validationEmailMessage");
               }
-              $this.data("validationValidemailMessage", message);
+              $this.data("validationValidemailMessage", message);   
             }
             // ---------------------------------------------------------
             //                                                MINCHECKED

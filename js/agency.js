@@ -23,6 +23,17 @@
             $('.navbar-toggle:visible').click();
     });
 
+    //Closes the Responsive Menu on document click
+    $(document).ready(()=>{
+        $(document).click((event)=> {
+            let clickout = $(event.target);
+            let open_menu = $(".navbar-collapse").hasClass("navbar-collapse in");
+            if (open_menu === true && !clickout.hasClass("navbar-toggle")){
+                $("navbar-toggle:visible").click();
+            }
+        });
+    });
+
     // Offset for Main Navigation
     $('#mainNav').affix({
         offset: {
