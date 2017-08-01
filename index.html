@@ -472,7 +472,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" maxlength=true min=true required data-validation-required-message="Please enter your name.">
+                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" maxlength=true min=true pattern="^\S+(?: \S+)*$"required data-validation-required-message="Please enter your name.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
@@ -554,7 +554,7 @@
                                 <img class="img-responsive img-centered" src="img/gifs/SGTdraft1.gif" alt="">
                                 <p>This app is a custom Content Management System built to track student grades in all of their classes. This kind of CMS is a quckly customized, easily debugged system with robust documentation. I learned that most of the features we take for granted in the most commonly used apps are essentially the same type of system, though thuroughly unique in their application of the same technologies. I personally dove most deeply into the opportunity to learn more about databases, specifically the administration, which gave me some really interesting insight into data as a product. I was most curious about how to protect each users data simply, though it is still an ongoing investigation. Through this project, like in the calculator, I was more intimately introduced to the idea of ownership of product. For example, even though every single student was given the same project, each created a unique product with a different UX. This is what I think I find most interesting about programming; though a science, and applied through engineering, there is a lot of room for creativity and self expression through one's code. In future iterations, I plan on repurposing the system towards household recipe storage and recall, with search functionality, unique users, and a React front-end.</p>
                                 <p><strong>Want to see the code?</strong>You can check it out at <a href="https://github.com/Kozyrov/SGT/tree/v3.1" target="_blank">GitHub.com</a></p>
-                                <ul class="list-inline">
+                                <ul class="list-inline"> 
                                     <li>Date: June 2017</li>
                                     <li>Client: Personal</li>
                                     <li>Category: Educational Content Management System</li>

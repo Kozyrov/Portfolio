@@ -23,7 +23,7 @@
             $('.navbar-toggle:visible').click();
     });
 
-    //Closes the Responsive Menu on document click
+    // Closes the Responsive Menu on document click
     $(document).ready(()=>{
         $(document).click((event)=> {
             let clickout = $(event.target);
