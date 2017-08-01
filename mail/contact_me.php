@@ -6,7 +6,7 @@ if(empty($_POST['name'])      ||
    empty($_POST['message'])   ||
    !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
    {
-   echo "No arguments Provided!";
+   echo "Missing one or more arguments!";
    return false;
    }
    
@@ -21,6 +21,10 @@ $email_subject = "Website Contact Form:  $name";
 $email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
 $headers = "From: noreply@stevengfrankenfield.com\r\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $headers .= "Reply-To: $email_address\r\n";   
-mail($to,$email_subject,$email_body);
+if (mail($to,$email_subject,$email_body)){
+  print_r('php mail function was successful!');   
+} else {
+    print_r('php mail function was NOT successful!');
+}
 // return true;
 ?>
