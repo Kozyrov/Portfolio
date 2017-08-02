@@ -50,7 +50,7 @@ $mail->Subject = 'Portfolio Inquiry from:'.''.$name;
 $mail->Body    = $message.''.$phone;
 $output = [
   'success'=>false
-]
+];
 if(!$mail->send()) {
     
     $output['error'] = $mail->ErrorInfo;
