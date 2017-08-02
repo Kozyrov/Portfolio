@@ -10,7 +10,7 @@ if(empty($_POST['name'])      ||
    !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
    {
    echo "Missing one or more arguments!";
-   return false;-
+   return false;
    }
    
 $name = strip_tags(htmlspecialchars($_POST['name']));
