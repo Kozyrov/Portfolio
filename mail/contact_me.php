@@ -21,7 +21,7 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
 require_once('contact_config.php');
 require('phpmailer/PHPMailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
-$mail->SMTPDebug = 3;                               // Enable verbose debug output
+$mail->SMTPDebug = 0;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
@@ -48,24 +48,14 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 $mail->Subject = 'Portfolio Inquiry from:'.''.$name;
 $mail->Body    = $message.''.$phone;
-
+$output = [
+  'success'=>false
+]
 if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    
+    $output['error'] = $mail->ErrorInfo;
 } else {
-    echo 'Message has been sent';
+    $output['success']=true;
 }
+print(json_encode($output));
 ?>
-
-<!-- // Create the email and send the message
-$to = 'sfrankie11@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Website Contact Form:  $name";
-$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-$headers = "From: noreply@stevengfrankenfield.com\r\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email_address\r\n";   
-if (mail($to,$email_subject,$email_body, $headers)){
-  print_r('php mail function was successful!');   
-} else {
-  print_r('php mail function was NOT successful!');
-}
-// return true; -->
