@@ -46,8 +46,8 @@ $mail->addAddress('sfrankie11@gmail.com', 'Steven Frankenfield');     // Add a r
 $mail->addReplyTo($email_address, $name);
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Portfolio Inquiry from:'.''.$name;
-$mail->Body    = $message.''.$phone;
+$mail->Subject = 'Portfolio Inquiry from:'.' '.$name;
+$mail->Body    = $message."/n".$phone;
 $output = [
   'success'=>false
 ];
