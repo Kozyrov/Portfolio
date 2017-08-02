@@ -10,7 +10,7 @@ if(empty($_POST['name'])      ||
    !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
    {
    echo "Missing one or more arguments!";
-   return false;
+   return false;-
    }
    
 $name = strip_tags(htmlspecialchars($_POST['name']));
@@ -18,7 +18,6 @@ $email_address = strip_tags(htmlspecialchars($_POST['email']));
 $phone = strip_tags(htmlspecialchars($_POST['phone']));
 $message = strip_tags(htmlspecialchars($_POST['message']));
 
-<?php
 require_once('contact_config.php');
 require('phpmailer/PHPMailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
