@@ -23,17 +23,6 @@
             $('.navbar-toggle:visible').click();
     });
 
-    // Closes the Responsive Menu on document click
-    $(document).ready(()=>{
-        $(document).click((event)=> {
-            let clickout = $(event.target);
-            let open_menu = $(".navbar-collapse").hasClass("navbar-collapse in");
-            if (open_menu === true && !clickout.hasClass("navbar-toggle")){
-                $("navbar-toggle:visible").click();
-            }
-        });
-    });
-
     // Offset for Main Navigation
     $('#mainNav').affix({
         offset: {
@@ -41,4 +30,16 @@
         }
     })
 
-})(jQuery); // End of use strict
+    // listen for click event on document and close menu
+    $('body').click(function(event){
+        if ($(event.target).closest('#mainNav').length) {
+            return; //do nothing if event target is within the navigation
+        } else {
+            // do something if the event target is outside the navigation
+             // code for collapsing menu here...
+             $('.navbar-collapse').collapse('hide');
+        }
+    });
+    
+})(jQuery); //end use of strict
+
