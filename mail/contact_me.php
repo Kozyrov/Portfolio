@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 // Check for empty fields
 if(empty($_POST['name'])      ||
    empty($_POST['email'])     ||
-   empty($_POST['phone'])     ||
+   empty($_POST['subject'])     ||
    empty($_POST['message'])   ||
    !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
    {
@@ -15,7 +15,7 @@ if(empty($_POST['name'])      ||
    
 $name = strip_tags(htmlspecialchars($_POST['name']));
 $email_address = strip_tags(htmlspecialchars($_POST['email']));
-$phone = strip_tags(htmlspecialchars($_POST['phone']));
+$subject = strip_tags(htmlspecialchars($_POST['subject']));
 $message = strip_tags(htmlspecialchars($_POST['message']));
 
 require_once('contact_config.php');
@@ -46,8 +46,8 @@ $mail->addAddress('sfrankie11@gmail.com', 'Steven Frankenfield');     // Add a r
 $mail->addReplyTo($email_address, $name);
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Portfolio Inquiry from:'.' '.$name;
-$mail->Body    = $message."/n".$phone;
+$mail->Subject =  $subject.' '.'from:'.' '.$name;
+$mail->Body = $message;S
 $output = [
   'success'=>false
 ];
