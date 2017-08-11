@@ -50,7 +50,8 @@ $mail->Body = $message;
 
 $output = [
     'success'=>false
-]
+];
+
 if(!$mail->send()) {
     $output['error'] = $mail->ErrorInfo;
 } else {
