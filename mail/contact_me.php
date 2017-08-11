@@ -48,10 +48,13 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject =  $subject;
 $mail->Body = $message;
 
+$output = [
+    'success'=>false
+]
 if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    $output['error'] = $mail->ErrorInfo;
 } else {
-    echo 'Message has been sent';
+    $output['success'] = true;
 }
+print(json_encode($output));
 ?>
