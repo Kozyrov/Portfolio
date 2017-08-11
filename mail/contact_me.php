@@ -45,17 +45,13 @@ $mail->FromName = 'Steven G. Frankenfield';//your email sending account name
 $mail->addAddress('sfrankie11@gmail.com', 'Steven Frankenfield');     // Add a recipient
 $mail->addReplyTo($email_address, $name);
 $mail->isHTML(true);                                  // Set email format to HTML
+$mail->Subject =  $subject;
+$mail->Body = $message;
 
-$mail->Subject =  $subject.' '.'from:'.' '.$name;
-$mail->Body = $message;S
-$output = [
-  'success'=>false
-];
 if(!$mail->send()) {
-    
-    $output['error'] = $mail->ErrorInfo;
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    $output['success']=true;
+    echo 'Message has been sent';
 }
-print(json_encode($output));
 ?>
