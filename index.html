@@ -23,6 +23,9 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
+    <!-- Calculator Modal Script -->
+    <link type="html/javascript"href="js/calculator.js">
+
     <!-- Theme CSS -->
     <link href="css/agency.css" rel="stylesheet">
 
@@ -619,7 +622,41 @@
                                 <!-- Project Details Go Here -->
                                 <h2>Scientific Calculator</h2>
                                 <p class="item-intro text-muted">A defining project for me.</p>
-                                <img class="img-responsive img-centered" src="img/gifs/Calcdraft1.gif" alt="">
+                                <!-- <img class="img-responsive img-centered" src="img/gifs/Calcdraft1.gif" alt=""> -->
+                                <div class="container calculator">
+                                        <div class="row">
+                                            <div class="col-sm-12 display_screen"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="btn col-xs-4 button clear_buttons">C</div>
+                                            <div class="btn col-xs-4 button clear_buttons">CE</div>
+                                            <div class="btn col-xs-4 button operator">%</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="btn col-xs-3 button number">7</div>
+                                            <div class="btn col-xs-3 button number">8</div>
+                                            <div class="btn col-xs-3 button number">9</div>
+                                            <div class="btn col-xs-3 button operator">*</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="btn col-xs-3 button number">4</div>
+                                            <div class="btn col-xs-3 button number">5</div>
+                                            <div class="btn col-xs-3 button number">6</div>
+                                            <div class="btn col-xs-3 button operator">-</div>
+                                        </div>
+                                            <div class="row">
+                                                <div class="btn col-xs-3 button number">1</div>
+                                                <div class="btn col-xs-3 button number">2</div>
+                                                <div class="btn col-xs-3 button number">3</div>
+                                                <div class="btn col-xs-3 button operator">+</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="btn col-xs-3 button number">0</div>
+                                                <div class="btn col-xs-3 button decimal number">.</div>
+                                                <div class="btn col-xs-6 button operator">=</div>
+                                            </div>
+                                        </div>
+                                    </div>    
                                 <p>This calculator shows a defining moment for me as a developer. The goal of this project was to give the students a sense of how complex seemingly simple operations can be as well as what must be considered when developing for users. We were told to build a commercial calculator, and then to test its functionality, we entered a series of keystrokes that would simulate optimal and erratic user input. I chose to challenge myself here and create an even more complex system that could handle simple order of operations in its calculations and to handle keyboard input. Even with all the challenges, I was able to create a product that was stable. Most importantly, this is the first project I built as a developer, and not just as a student. The code presented here is clunky and convoluted, but stable. I include it to show how far I’ve come, and though there are things I would do differently now, I would be lying if I said I wasn’t proud of this messy calculator just as it is.</p>
                                 <p>You can view the full script on my <a href="https://github.com/Kozyrov/calculator/tree/version1" target="_blank">GitHub</a>.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
