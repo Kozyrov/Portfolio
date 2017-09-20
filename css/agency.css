@@ -3,6 +3,44 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+  /*Calculator modal styling*/
+.calculator {
+    margin-top: 10vh;
+    border: solid 2px black;
+    height: 70vh;
+    width: 27vw;
+}
+.display_screen {
+    border: solid 3px lightseagreen;
+    height: 16%;
+    overflow: auto;
+}
+.button {
+    height: 100%;
+}
+.number {
+    border: solid 1px black;
+}
+.operator {
+    border: solid 3px darkred;
+}
+.clear_buttons {
+    border: solid 3px darkblue;
+}
+.display_screen {
+    height: 100%;
+}
+.row {
+    height: 16.66%;
+}
+.plus_container {
+    height: 32%;
+    width: 100%;
+}
+.bottom_two_rows {
+    height: 100%;
+    width: 100%;
+}
 
   /*Force the navbar to collapse at 992px*/
 @media (max-width: 992px) {

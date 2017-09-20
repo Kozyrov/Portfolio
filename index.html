@@ -23,6 +23,9 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
+    <!-- Calculator Modal Script -->
+    <link type="html/javascript"href="js/calculator.js">
+
     <!-- Theme CSS -->
     <link href="css/agency.css" rel="stylesheet">
 
@@ -276,9 +279,9 @@
                         <img src="img/gifs/SGTdraft1.gif" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Student Grade Table</h4>
-                        <p class="text-muted">Education record keeping CMS:</p>
-                        <p class="text-muted">JS, Ajax, Bootstrap, MySQL</p>
+                        <h4>Orange You Glad</h4>
+                        <p class="text-muted">Data gathering logic puzzle:</p>
+                        <p class="text-muted">JS, CSS3, HTML5, jQuery, Node.js, Mongoose, MongoDB</p>
                     </div>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -550,15 +553,15 @@
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
-                                <h2>Student Grade Table</h2>
-                                <p class="item-intro text-muted">CMS designed for tracking student progress.</p>
+                                <h2>Orange You Glad</h2>
+                                <p class="item-intro text-muted">Interview logic puzzle employed as a basic standard for candidate problem solving.</p>
                                 <img class="img-responsive img-centered" src="img/gifs/SGTdraft1.gif" alt="">
-                                <p>This app is a custom Content Management System built to track the grades of students in all of their classes. This kind of CMS is a quickly customizable, easily debugged system with robust documentation. In learning to administer the database, I gained valuable insight into data as a product and user data security. Even more so than in previous projects, I was able to take ownership over the final product. What I find most appealing about programming is, though it’s a science applied through engineering, there is an aspect of personal style and interpretation, both front and back end, that is essential to creating unique and effective products. In future iterations, I plan on repurposing the system for household recipe curation, with search functionality, unique user profiles, and a React front-end.</p>
-                                <p><strong>Want to see the code?</strong>You can check it out at <a href="https://github.com/Kozyrov/SGT/tree/v3.1_release" target="_blank">GitHub.com</a></p>
+                                <p>A responsive logic puzzle site used to vet job candidates problem solving ability. The form tracks the results by requiring a valid candidate email. The data is stored in a glad Mongo database using Mongoose to handle the connection and configuration. The project demonstrates my understanding of the full software stack, being able to generate and validate data, route it through the front end, to a web server, properly balidate on the back end, store the data within a database, and give feedback to the user.</p>
+                                <p><strong>Want to see the code?</strong>You can check it out at <a href="https://github.com/Kozyrov/Orange_You_Glad" target="_blank">GitHub.com</a></p>
                                 <ul class="list-inline"> 
-                                    <li>Date: June 2017</li>
+                                    <li>Date: 9/1 2017</li>
                                     <li>Client: Personal</li>
-                                    <li>Category: Educational Content Management System</li>
+                                    <li>Category: Full Stack Development</li>
                                 </ul>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
@@ -587,7 +590,7 @@
                                 <p class="item-intro text-muted">Gig Economy Food Service Platform</p>
                                 <img class="img-responsive img-centered" src="img/gifs/nxtDoorChefdraft1.gif" alt="">
                                 <p><a href="http:nxtDoorChef.com" target="_blank">nxtDoorChef.com</a> is a web-app that brings the gig economy into your kitchen. The app enables home cooks to produce and sell menus of their own creation from their home kitchen. This app was my favorite to work on, since it provided the best opportunity to work exclusively with Node.js, my first programmatic love. During the process of creating this app, our team was initially overwhelmed with the idea of MVP, but we quickly learned how to identify what is most essential in the earliest stages of development. This was a hard lesson to learn, but one of the most valuable: minimal, well-executed functionality will serve you better than a multitude of half-baked features. During the development process, I had full ownership of the database. Everything from the administration, to the creation of the data, to building the RESTful API using Node.js as the server fell under my domain. This project was very demanding, and I often found myself creating scripts for front-end functionality, like the confirmation email module, in addition to my full complement of back-end assignments. I was lucky to be able to contribute to such an ambitious project, and to lead a team of such committed programmers. The team continues to make improvements and learn new tools to make the app more effective.</p>
-                                <p>You can check out the live page at <a href="http://nxtDoorChef.com" target="_blank">nxtDoorChef.com</a> or visit the <a href="https://github.com/caliteej/C4.17_food_on_demand/tree/dev" target="_blank">GitHub</a> here.</p>
+                                <p>You can check out the live page at <a href="https://nxtDoorChef.com" target="_blank">nxtDoorChef.com</a> or visit the <a href="https://github.com/caliteej/C4.17_food_on_demand/tree/dev" target="_blank">GitHub</a> here.</p>
                                 <ul class="list-inline">
                                     <li>Date: June 2017</li>
                                     <li>Client: Personal</li>
@@ -619,7 +622,41 @@
                                 <!-- Project Details Go Here -->
                                 <h2>Scientific Calculator</h2>
                                 <p class="item-intro text-muted">A defining project for me.</p>
-                                <img class="img-responsive img-centered" src="img/gifs/Calcdraft1.gif" alt="">
+                                <!-- <img class="img-responsive img-centered" src="img/gifs/Calcdraft1.gif" alt=""> -->
+                                <div class="container calculator">
+                                        <div class="row">
+                                            <div class="col-sm-12 display_screen"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="btn col-xs-4 button clear_buttons">C</div>
+                                            <div class="btn col-xs-4 button clear_buttons">CE</div>
+                                            <div class="btn col-xs-4 button operator">%</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="btn col-xs-3 button number">7</div>
+                                            <div class="btn col-xs-3 button number">8</div>
+                                            <div class="btn col-xs-3 button number">9</div>
+                                            <div class="btn col-xs-3 button operator">*</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="btn col-xs-3 button number">4</div>
+                                            <div class="btn col-xs-3 button number">5</div>
+                                            <div class="btn col-xs-3 button number">6</div>
+                                            <div class="btn col-xs-3 button operator">-</div>
+                                        </div>
+                                            <div class="row">
+                                                <div class="btn col-xs-3 button number">1</div>
+                                                <div class="btn col-xs-3 button number">2</div>
+                                                <div class="btn col-xs-3 button number">3</div>
+                                                <div class="btn col-xs-3 button operator">+</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="btn col-xs-3 button number">0</div>
+                                                <div class="btn col-xs-3 button decimal number">.</div>
+                                                <div class="btn col-xs-6 button operator">=</div>
+                                            </div>
+                                        </div>
+                                    </div>    
                                 <p>This calculator shows a defining moment for me as a developer. The goal of this project was to give the students a sense of how complex seemingly simple operations can be as well as what must be considered when developing for users. We were told to build a commercial calculator, and then to test its functionality, we entered a series of keystrokes that would simulate optimal and erratic user input. I chose to challenge myself here and create an even more complex system that could handle simple order of operations in its calculations and to handle keyboard input. Even with all the challenges, I was able to create a product that was stable. Most importantly, this is the first project I built as a developer, and not just as a student. The code presented here is clunky and convoluted, but stable. I include it to show how far I’ve come, and though there are things I would do differently now, I would be lying if I said I wasn’t proud of this messy calculator just as it is.</p>
                                 <p>You can view the full script on my <a href="https://github.com/Kozyrov/calculator/tree/version1" target="_blank">GitHub</a>.</p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
