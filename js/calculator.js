@@ -22,6 +22,9 @@ var valid_input_array = ['1', '2', '3','4','5','6','7','8','9','0','.','+','-','
 //I want to store the value of the button pressed.
 function button_check(button) {
     button_text = button;
+    if(button_text === "CLOSE PROJECT") {
+        return;
+    };
     //find the operators here.
     if ($.inArray(button_text, operator_array) >= 0) {
         if (equation_storage[0] === '') {
