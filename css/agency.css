@@ -831,3 +831,9 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #220bba;
 }
+.logo-vertical-align {
+  padding-top: 6%;
+}
+.skill-vertical-align {
+  margin-top: 24%;
+}
